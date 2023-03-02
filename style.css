@@ -39,6 +39,7 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: auto;
 }
 
 header .menu {
@@ -137,7 +138,7 @@ h2 {
 .section-travels {
   display: grid;
   grid-template-columns: 25% 1fr 25%;
-  grid-template-rows: 320px 320px;
+  grid-template-rows: 40vh 40vh;
   grid-column-gap: 0;
   grid-row-gap: 50px;
   margin-top: 50px;
@@ -218,8 +219,9 @@ article:nth-child(5) a::before {
 }
 
 article img {
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: 500px;
+  margin: auto;
   object-fit: contain;
 }
 
@@ -274,16 +276,19 @@ body article div {
     0.2s forwards;
   height: 0;
   overflow: hidden;
+  padding-top: 0;
 }
 
 body.travels article div {
   height: auto;
+  padding-top: 10vh;
+
 }
 
 body.travels article a::before {
   bottom: 0;
   top: auto;
-  height: 500px;
+  height: 60vh;
   transform: none;
   border-radius: 400px 400px 0 0;
 }
@@ -443,20 +448,22 @@ article.travel-barba-enter {
   top: 100px !important;
   height: calc(100vh - 100px) !important;
   transform: translateX(0);
+  padding-top: 0;
 }
 
 article.travel-barba-enter div {
-  transition: height 0.7s;
+  transition: height 0.7s, padding 0.7s;
   height: auto;
   opacity: 0;
   visibility: hidden;
+  padding-top: 10vh;
 }
 
 article.travel-barba-enter a::before {
-  transition: all 1s;
+  transition: all 0.3s;
   bottom: 0;
   top: auto;
-  height: 500px;
+  height: 60vh;
   transform: none;
   border-radius: 400px 400px 0 0;
 }

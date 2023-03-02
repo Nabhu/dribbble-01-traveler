@@ -281,8 +281,7 @@ body article div {
 
 body.travels article div {
   height: auto;
-  padding-top: 10vh;
-
+  padding-top: 0;
 }
 
 body.travels article a::before {
@@ -456,7 +455,14 @@ article.travel-barba-enter div {
   height: auto;
   opacity: 0;
   visibility: hidden;
-  padding-top: 10vh;
+  padding-top: 0;
+}
+
+@media screen and (min-width: 1400px) {
+  article.travel-barba-enter div,
+  body.travels article div {
+    padding-top: 10vh;
+  }
 }
 
 article.travel-barba-enter a::before {
